@@ -25,11 +25,15 @@
 4. [supabase/schema.sql](./supabase/schema.sql) の中身をコピーして実行します。  
    これで `todos` テーブルと、認証なしで読み書きするためのポリシーが作られます。
 
-5. Supabase の URL と anon key を確認します。  
-   `Project Settings` → `Data API` を開くと、`Project URL` と `anon public` key が見つかります。
+5. Supabase の url と anon key を確認します。  
+   画面上部の`Connect` を開くと
+   SUPABASE_URL=https://～～～   
+   SUPABASE_PUBLISHABLE_KEY=sb_publishable～～～　があります。
+   上がurl、下がanonKeyです。
 
 6. [config.js](./config.js) を開きます。  
    次の 2 か所を自分の値に書き換えます。
+   （`VS Code`で開き、「File」→「Open Folder」する）
 
    ```js
    window.SUPABASE_CONFIG = {
