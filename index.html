@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>シンプルToDoアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <p class="eyebrow">GitHub Pages + Supabase</p>
+      <h1>シンプルToDoアプリ</h1>
+      <p class="app-description">
+        追加・表示・削除した内容を Supabase に保存します。
+        同じ URL を開けば、別のスマホや PC からでも同じ ToDo を確認できます。
+      </p>
+    </header>
+
+    <section class="input-area" aria-label="ToDo入力フォーム">
+      <input id="todo-input" type="text" placeholder="やることを入力" maxlength="100">
+      <input id="deadline-input" type="date">
+      <input id="category-input" type="text" placeholder="カテゴリを入力" maxlength="30">
+      <button id="add-button" type="button">追加</button>
+    </section>
+
+    <p id="status-message" class="status-message" aria-live="polite"></p>
+
+    <ul id="todo-list" aria-label="ToDo一覧"></ul>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
